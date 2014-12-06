@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22395E731A3281DD001664C3 /* TBMGridElementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22395E721A3281DD001664C3 /* TBMGridElementViewController.m */; };
+		22395E751A32A254001664C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22395E741A32A254001664C3 /* Images.xcassets */; };
 		225CE39D1A2FBAE600EDF90F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CE39C1A2FBAE600EDF90F /* main.m */; };
 		225CE3A01A2FBAE600EDF90F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CE39F1A2FBAE600EDF90F /* AppDelegate.m */; };
 		225CE3A31A2FBAE600EDF90F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CE3A21A2FBAE600EDF90F /* ViewController.m */; };
 		225CE3A61A2FBAE600EDF90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225CE3A41A2FBAE600EDF90F /* Main.storyboard */; };
-		225CE3A81A2FBAE600EDF90F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225CE3A71A2FBAE600EDF90F /* Images.xcassets */; };
 		225CE3AB1A2FBAE600EDF90F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225CE3A91A2FBAE600EDF90F /* LaunchScreen.xib */; };
 		225CE3B71A2FBAE600EDF90F /* GridLayoutTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CE3B61A2FBAE600EDF90F /* GridLayoutTestTests.m */; };
+		2359281E674B4A7AB7F8B32E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1229E1FC9BD04B80A662B29F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1229E1FC9BD04B80A662B29F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		22395E711A3281DD001664C3 /* TBMGridElementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMGridElementViewController.h; sourceTree = "<group>"; };
+		22395E721A3281DD001664C3 /* TBMGridElementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMGridElementViewController.m; sourceTree = "<group>"; };
+		22395E741A32A254001664C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../../Desktop/Images.xcassets; sourceTree = "<group>"; };
 		225CE3971A2FBAE600EDF90F /* GridLayoutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridLayoutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225CE39B1A2FBAE600EDF90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		225CE39C1A2FBAE600EDF90F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,11 +41,11 @@
 		225CE3A11A2FBAE600EDF90F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		225CE3A21A2FBAE600EDF90F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		225CE3A51A2FBAE600EDF90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		225CE3A71A2FBAE600EDF90F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		225CE3AA1A2FBAE600EDF90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		225CE3B01A2FBAE600EDF90F /* GridLayoutTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridLayoutTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		225CE3B51A2FBAE600EDF90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		225CE3B61A2FBAE600EDF90F /* GridLayoutTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridLayoutTestTests.m; sourceTree = "<group>"; };
+		88160ABFB62740CC8E641A44 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2359281E674B4A7AB7F8B32E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +73,8 @@
 				225CE3991A2FBAE600EDF90F /* GridLayoutTest */,
 				225CE3B31A2FBAE600EDF90F /* GridLayoutTestTests */,
 				225CE3981A2FBAE600EDF90F /* Products */,
+				88160ABFB62740CC8E641A44 /* Pods.xcconfig */,
+				D868893A38014F7A901C9D69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +90,16 @@
 		225CE3991A2FBAE600EDF90F /* GridLayoutTest */ = {
 			isa = PBXGroup;
 			children = (
+				22395E741A32A254001664C3 /* Images.xcassets */,
 				225CE39E1A2FBAE600EDF90F /* AppDelegate.h */,
 				225CE39F1A2FBAE600EDF90F /* AppDelegate.m */,
 				225CE3A11A2FBAE600EDF90F /* ViewController.h */,
 				225CE3A21A2FBAE600EDF90F /* ViewController.m */,
 				225CE3A41A2FBAE600EDF90F /* Main.storyboard */,
-				225CE3A71A2FBAE600EDF90F /* Images.xcassets */,
 				225CE3A91A2FBAE600EDF90F /* LaunchScreen.xib */,
 				225CE39A1A2FBAE600EDF90F /* Supporting Files */,
+				22395E711A3281DD001664C3 /* TBMGridElementViewController.h */,
+				22395E721A3281DD001664C3 /* TBMGridElementViewController.m */,
 			);
 			path = GridLayoutTest;
 			sourceTree = "<group>";
@@ -119,6 +130,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D868893A38014F7A901C9D69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1229E1FC9BD04B80A662B29F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 225CE3BA1A2FBAE600EDF90F /* Build configuration list for PBXNativeTarget "GridLayoutTest" */;
 			buildPhases = (
+				76E11FD73BFE469AAF7FE99C /* Check Pods Manifest.lock */,
 				225CE3931A2FBAE600EDF90F /* Sources */,
 				225CE3941A2FBAE600EDF90F /* Frameworks */,
 				225CE3951A2FBAE600EDF90F /* Resources */,
+				7CA14DC5B04C494F9AC8AA05 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +220,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22395E751A32A254001664C3 /* Images.xcassets in Resources */,
 				225CE3A61A2FBAE600EDF90F /* Main.storyboard in Resources */,
 				225CE3AB1A2FBAE600EDF90F /* LaunchScreen.xib in Resources */,
-				225CE3A81A2FBAE600EDF90F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +235,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76E11FD73BFE469AAF7FE99C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CA14DC5B04C494F9AC8AA05 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		225CE3931A2FBAE600EDF90F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +276,7 @@
 				225CE3A31A2FBAE600EDF90F /* ViewController.m in Sources */,
 				225CE3A01A2FBAE600EDF90F /* AppDelegate.m in Sources */,
 				225CE39D1A2FBAE600EDF90F /* main.m in Sources */,
+				22395E731A3281DD001664C3 /* TBMGridElementViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +396,11 @@
 		};
 		225CE3BB1A2FBAE600EDF90F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88160ABFB62740CC8E641A44 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GridLayoutTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,9 +408,11 @@
 		};
 		225CE3BC1A2FBAE600EDF90F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88160ABFB62740CC8E641A44 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GridLayoutTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +471,7 @@
 				225CE3BC1A2FBAE600EDF90F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		225CE3BD1A2FBAE600EDF90F /* Build configuration list for PBXNativeTarget "GridLayoutTestTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +480,7 @@
 				225CE3BF1A2FBAE600EDF90F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
