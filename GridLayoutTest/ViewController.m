@@ -11,7 +11,7 @@
 #import "HexColor.h"
 
 @interface ViewController ()
-@property (nonatomic) UIView *mainView;
+@property (nonatomic) UIView *contentView;
 @property (nonatomic) UIView *headerView;
 @end
 
@@ -22,6 +22,7 @@ static const float LayoutConstMARGIN = 5;
 static const float LayoutConstASPECT = 0.75;
 static const float LayoutConstHEADER_HEIGHT = 55;
 static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
+static const float LayoutConstBENCH_ICON_HEIGHT = LayoutConstHEADER_HEIGHT *0.4;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +45,7 @@ static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
     for (UIViewController *c in self.childViewControllers){
         [c removeFromParentViewController];
     }
-    for (UIView *v in self.mainView.subviews){
+    for (UIView *v in self.contentView.subviews){
         [v removeFromSuperview];
     }
 }
@@ -52,14 +53,19 @@ static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
 - (void)addViews {
     [self removeViews];
     [self addHeaderView];
-    [self addMainView];
+    [self addContentView];
     [self addGridViews];
 }
+
+//-----------
+// HeaderView
+//-----------
 
 - (void)addHeaderView{
     self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LayoutConstHEADER_HEIGHT)];
     self.headerView.backgroundColor = [UIColor colorWithHexString:@"1B1B19" alpha:1];
     [self.headerView addSubview:[self logoView]];
+    [self.headerView addSubview:[self drawerIconView]];
     [self.view addSubview:self.headerView];
 }
 
@@ -72,10 +78,24 @@ static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
     return lv;
 }
 
-- (void)addMainView{
-    self.mainView = [[UIView alloc] initWithFrame:CGRectMake(0, LayoutConstHEADER_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height - LayoutConstHEADER_HEIGHT)];
-    self.mainView.backgroundColor = [UIColor colorWithHexString:@"2E2D28" alpha:1];
-    [self.view addSubview:self.mainView];
+- (UIImageView *)drawerIconView{
+    UIImage *i = [UIImage imageNamed:@"drawerIcon"];
+    float aspect = i.size.width / i.size.height;
+    UIImageView *iv = [[UIImageView alloc] initWithImage:i];
+    float w = aspect * LayoutConstBENCH_ICON_HEIGHT;
+    float x = self.view.bounds.size.width - LayoutConstGUTTER - w;
+    float y = (LayoutConstHEADER_HEIGHT - LayoutConstBENCH_ICON_HEIGHT) / 2;
+    iv.frame = CGRectMake(x, y, w, LayoutConstBENCH_ICON_HEIGHT);
+    return iv;
+}
+
+//------------
+// ContentView
+//------------
+- (void)addContentView{
+    self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, LayoutConstHEADER_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height - LayoutConstHEADER_HEIGHT)];
+    self.contentView.backgroundColor = [UIColor colorWithHexString:@"2E2D28" alpha:1];
+    [self.view addSubview:self.contentView];
 }
 
 - (void)addGridViews{
@@ -88,7 +108,7 @@ static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
             x = [self LayoutConstGUTTERLeft] + col * (LayoutConstMARGIN + elSize.width);
             y = [self LayoutConstGUTTERTop] + row * (LayoutConstMARGIN + elSize.height);
             v = [[UIView alloc] initWithFrame:CGRectMake(x, y, elSize.width, elSize.height)];
-            [self.mainView addSubview:v];
+            [self.contentView addSubview:v];
             
             UIViewController *c = [TBMGridElementViewController new];
             [self addChildViewController:c];
@@ -99,8 +119,8 @@ static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
 }
 
 - (CGSize) elementSize {
-    long mainViewWidth = self.mainView.bounds.size.width;
-    long mainViewHeight = self.mainView.bounds.size.height;
+    long mainViewWidth = self.contentView.bounds.size.width;
+    long mainViewHeight = self.contentView.bounds.size.height;
     long width;
     long height;
     if ([self isHeightConstrained]){
@@ -117,7 +137,7 @@ static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
     if ([self isHeightConstrained])
         return LayoutConstGUTTER;
     else
-        return ( self.mainView.bounds.size.height - 3*[self elementSize].height - 2*LayoutConstMARGIN ) / 2;
+        return ( self.contentView.bounds.size.height - 3*[self elementSize].height - 2*LayoutConstMARGIN ) / 2;
 
 }
 
@@ -125,11 +145,11 @@ static const float LayoutConstLOGO_HEIGHT = LayoutConstHEADER_HEIGHT * 0.4;
     if ([self isWidthConstrained])
         return LayoutConstGUTTER;
     else
-        return ( self.mainView.bounds.size.width - 3*[self elementSize].width - 2*LayoutConstMARGIN ) / 2;
+        return ( self.contentView.bounds.size.width - 3*[self elementSize].width - 2*LayoutConstMARGIN ) / 2;
 }
 
 - (BOOL) isWidthConstrained{
-    return (self.mainView.bounds.size.width / self.mainView.bounds.size.height) < LayoutConstASPECT;
+    return (self.contentView.bounds.size.width / self.contentView.bounds.size.height) < LayoutConstASPECT;
 }
 
 - (BOOL) isHeightConstrained{
